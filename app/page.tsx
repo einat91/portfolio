@@ -1,13 +1,13 @@
 "use client"
 
 import { useEffect } from "react"
+import Image from "next/image"
 import {
   Linkedin,
   Mail,
   MapPin,
   Phone,
   ExternalLink,
-  Download,
   Github,
   Bitcoin,
   Users,
@@ -18,10 +18,12 @@ import {
   TrendingUp,
   Trophy,
   Heart,
+  Star,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import { CVModal } from "@/components/cv-modal"
 
 export default function Portfolio() {
   useEffect(() => {
@@ -48,139 +50,153 @@ export default function Portfolio() {
     {
       title: "Bitcoin History Analysis",
       description:
-        "A comprehensive analysis of Bitcoin price movements from 2015-2025 using real market data from investing.com. I performed extensive SQL data processing and transformation to clean and structure the cryptocurrency data, then created interactive Tableau dashboards showcasing price volatility, trend analysis, and market correlation patterns.",
-      technologies: ["SQL", "Tableau", "Financial Analysis", "Time Series"],
-      image: "/placeholder.svg?height=200&width=300&text=Bitcoin+Analysis",
+        "An analysis of Bitcoin price movements from 2015-2025 using real market data from investing.com. I performed extensive SQL data processing and transformation to clean and structure the cryptocurrency data, then created interactive Tableau dashboards showcasing price volatility, trend analysis, and market correlation patterns.",
+      technologies: ["SQL", "Tableau", "Financial Analysis"],
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Bitcoin-a5Mwr36IsxRD8hBr8DAqECN6ZEHJAo.png",
       link: "https://public.tableau.com/app/profile/einat.ehrlich1896/viz/BitcoinHistoryChangeBetween2015-2025/Dashboard1",
-      category: "Analytics",
       icon: Bitcoin,
     },
     {
       title: "Monthly User Activity Report",
       description:
-        "Built a comprehensive user activity tracking system from the ground up, starting with database design and moving through Google Sheets integration to final Tableau visualization. I created custom SQL queries to analyze user engagement patterns, retention rates, and activity trends.",
-      technologies: ["SQL", "Google Sheets", "Tableau", "Database Design"],
-      image: "/placeholder.svg?height=200&width=300&text=User+Activity",
+        "Built and designed a user activity tracking report, from the database design, through Google Sheets integration to final Tableau visualization. I created custom SQL queries to analyze user engagement patterns and activity trends.",
+      technologies: ["SQL", "Google Sheets", "Tableau"],
+      image:
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Monthly%20User%20Activity%20Report-yS4n7BkBq3KomuxW9r63wuu8aRSPGd.png",
       link: "https://public.tableau.com/app/profile/einat.ehrlich1896/viz/MonthlyUserActivityReport/UserActivityReport",
-      category: "Analytics",
+      additionalLink: "https://drive.google.com/file/d/12yBHOxlP1wE_kMuHyGu_pYTSequjKoRv/view?usp=sharing",
       icon: Users,
     },
     {
-      title: "Executive Business Review - E-commerce",
+      title: "Executive Business Review for an E-commerce Company",
       description:
-        "Conducted a comprehensive Year-End Performance Analysis for Dynamite Clothing, providing strategic recommendations based on thorough market research and data analysis. Using mock-up data combined with real market insights, I created detailed Excel models and executive presentations.",
+        "Conducted a comprehensive Year-End Performance Analysis for an e-commerce company, providing strategic recommendations based on thorough market research and data analysis.",
       technologies: ["Excel", "PowerPoint", "Market Research", "Business Analysis"],
-      image: "/placeholder.svg?height=200&width=300&text=Business+Review",
-      link: "#",
-      category: "Business Intelligence",
+      image:
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Executive%20Business%20Review-waAuiPSGv05QAZJ4wJ6WgVkCsS1g3a.png",
+      link: "https://drive.google.com/file/d/1SN0PLAP_Fcom-ix-__SZfcLWSUlFsBFP/view?usp=sharing",
       icon: PresentationChart,
     },
     {
       title: "Cloud Costs Optimization",
       description:
-        "Built a comprehensive cost optimization system for LLM token usage across customer and internal operations. Using SQL queries on log databases and Datadog integration for tenant identification, I created detailed Tableau dashboards that track token consumption patterns.",
+        "Built a cost optimization report to optimize LLM token usage for both customer and internal operations. I used extensive SQL queries to clean log data and provide key visibility for tenant identification across log databases and Datadog reports. This data fed into a detailed Tableau dashboard that tracked token consumption patterns, enabling smarter resource management and significant cost savings.",
       technologies: ["SQL", "Tableau", "Datadog", "Cloud Analytics", "Cost Optimization"],
       image: "/placeholder.svg?height=200&width=300&text=Cloud+Costs",
       link: "#",
-      category: "Cloud Analytics",
       icon: Cloud,
     },
     {
-      title: "Fraud Detection Rules Engine",
+      title: "Fraud Detection Logic",
       description:
-        "Developed sophisticated SQL-based fraud detection rules for a security company, analyzing patterns in user behavior, device fingerprinting, and transaction anomalies. I created multiple detection algorithms that identified suspicious activities with high precision.",
+        "Created SQL-based fraud detection logic for a FinTech company. By analyzing patterns in user behavior, device fingerprinting, and transaction anomalies, this logic enabled the identification of suspicious activities.",
       technologies: ["SQL", "Fraud Detection", "Pattern Analysis", "Security"],
-      image: "/placeholder.svg?height=200&width=300&text=Fraud+Detection",
-      link: "#",
-      category: "Security Analytics",
+      image:
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Fraud%20Detection%20Rules-d84CP3oyXrlP6IXXYM47neuqBV0T56.png",
+      link: "https://drive.google.com/file/d/1gNzZfeWNQY8Weho6wZWFwgG6SOLaNXYp/view?usp=sharing",
       icon: Shield,
     },
     {
-      title: "Budget vs Actuals Dashboard",
+      title: "Financial Performance Dashboard",
       description:
-        "As Operations Lead and Data Analyst reporting directly to the CEO, I identified the critical need to track actual costs against budgets in real-time. I created a comprehensive Power BI dashboard that automated budget tracking, variance analysis, and cost optimization recommendations.",
+        "As Operations Lead and Data Analyst, I delivered an actionable Power BI dashboard to the CEO, addressing the critical need for real-time cost visibility. This system automated budget tracking and variance analysis, providing leadership with data-driven recommendations that led to significant cost optimization.",
       technologies: ["Power BI", "Excel", "Financial Analysis"],
-      image: "/placeholder.svg?height=200&width=300&text=Budget+Dashboard",
-      link: "#",
-      category: "Dashboard",
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Budget-AjnY6Umv9OC0ENHa0sXJmhfeJMZW1h.png",
+      link: "https://app.powerbi.com/view?r=eyJrIjoiOGM3NDkzYzktZTAzMS00ZGI1LTgyODYtZGM1M2Y2MTVhZTdiIiwidCI6IjAwZWIyMzU1LTRkYTItNDc0OS05ZTQ4LWE5OTAwYTFlYTMwMSIsImMiOjl9",
       icon: Calculator,
     },
     {
       title: "Sales Commissions Report",
       description:
-        "Working at an insurtech startup, I developed an end-to-end solution to track sales commissions across multiple platforms. I built automated data flows using Make.com to seamlessly integrate Salesforce, Stripe, and Google Sheets.",
+        "At an InsurTech startup, I developed an end-to-end solution to automate and track sales commissions across multiple platforms. I built automated data flows using Make.com to seamlessly integrate Salesforce, Stripe, Google Sheets, and Power BI, which saved significant operational time and ensured accurate commission payouts.",
       technologies: ["Power BI", "Salesforce", "Stripe", "Google Sheets", "Make.com"],
-      image: "/placeholder.svg?height=200&width=300&text=Sales+Commissions",
-      link: "#",
-      category: "Dashboard",
+      image:
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Sales%20Commissions-qj3sJCAWQDHMD6QKZd9KZdUWoRTo5c.png",
+      link: "https://app.powerbi.com/view?r=eyJrIjoiYjExYWJkMDgtNmIyOS00MWE5LWIxNmUtMmM4NjI3Mzk4OWI4IiwidCI6IjAwZWIyMzU1LTRkYTItNDc0OS05ZTQ4LWE5OTAwYTFlYTMwMSIsImMiOjl9",
       icon: TrendingUp,
     },
     {
       title: "World Football Results Analysis",
       description:
-        "Inspired by my passion for English football and the excitement of the World Cup, I created an interactive dashboard analyzing international football results. This project combines my love for the beautiful game with data storytelling.",
+        "Inspired by my passion for English football and the excitement of the World Cup, I created an interactive dashboard analyzing international football results. This project combines my love for the game with data storytelling.",
       technologies: ["Excel", "Power BI", "Data Visualization"],
-      image: "/placeholder.svg?height=200&width=300&text=Football+Analysis",
-      link: "#",
-      category: "Dashboard",
+      image:
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/World%20Football-uLzynmPVb3jOAG7Q4vhALvy0Tl9vjA.png",
+      link: "https://app.powerbi.com/view?r=eyJrIjoiMjVlZjI5OTEtNGJiYy00MDBhLWI5ZmEtN2QyNTllNzNhYjYzIiwidCI6IjAwZWIyMzU1LTRkYTItNDc0OS05ZTQ4LWE5OTAwYTFlYTMwMSIsImMiOjl9",
       icon: Trophy,
     },
     {
       title: "Bike Store Database Management",
       description:
-        "This project was part of the transformative 'She Codes' program - an amazing initiative designed to help women develop their careers in tech. I built a comprehensive database management system using Excel and SQL.",
+        "This project was created as part of the Data Analysis course of SheCodes, an amazing initiative designed to help women develop their careers in tech. I designed the database using Draw.io, and built a database management system using Excel and SQL. Then, I summarized the project and its insights in a final Canva presentation.",
       technologies: ["Excel", "SQL", "Database Design"],
-      image: "/placeholder.svg?height=200&width=300&text=Bike+Store+DB",
-      link: "#",
-      category: "Database",
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Bike%20Store-J17bOdhNhBKr5JRIfnLDvY1OAE9si4.png",
+      link: "https://drive.google.com/file/d/1PX71rsJ6GbPNtlqRWEnfSmTV73-o29hh/view?usp=sharing",
       icon: TrendingUp,
     },
-    {
-      title: "Berry - Pet Care Tracker",
-      description:
-        "A personal project born from adopting my sweet dog Berry! I built a full-stack web application using Firebase and Google authentication to help families track their pet's daily activities. Sometimes the best projects come from solving your own problems! 🐕",
-      technologies: ["Firebase", "Google Auth", "Vercel", "AI Integration", "React"],
-      image: "/placeholder.svg?height=200&width=300&text=Berry+Pet+Tracker",
-      link: "#",
-      githubLink: "#",
-      category: "Bonus Personal Project",
-      icon: Heart,
-      personal: true,
-    },
   ]
+
+  const berryProject = {
+    title: "Berry: Pet Care Tracker",
+    description:
+      "Motivated by the adoption of my sweet little dog, Berry, I built a web application to solve a common problem for pet owners: managing daily care. This tool helps track a pet's activities and ensures seamless communication among family members. The application was built using Vercel AI and Gemini, and it integrates a Firebase database with Google Authentication for secure, collaborative use.",
+    technologies: ["Firebase", "Google Auth", "Vercel", "AI Integration", "React"],
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Berry-fdCDW9D1dU2DsyD9reumBMAAho31RL.png",
+    link: "https://berry-come-home.vercel.app/",
+    githubLink: "https://github.com/einat91/berry",
+    icon: Heart,
+    personal: true,
+  }
 
   return (
     <div className="min-h-screen" style={{ backgroundColor: "#F0EBE3" }}>
       {/* Header */}
       <header className="container mx-auto px-4 py-8">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6 fade-in-up">
-          <div className="text-center md:text-left">
-            <h1 className="text-3xl md:text-4xl font-bold text-slate-800 mb-2">EINAT EHRLICH</h1>
-            <p className="text-lg text-slate-600 font-medium">Data Analyst | Project Management | Operations</p>
-          </div>
-
-          <div className="flex flex-col sm:flex-row gap-4 text-sm text-slate-600">
-            <a
-              href="https://linkedin.com/in/einat-ehrlich"
-              className="flex items-center gap-2 hover:text-stone-600 transition-colors"
-            >
-              <Linkedin className="w-4 h-4" />
-              <span>@einat-ehrlich</span>
-            </a>
-            <a
-              href="mailto:einat91@gmail.com"
-              className="flex items-center gap-2 hover:text-stone-600 transition-colors"
-            >
-              <Mail className="w-4 h-4" />
-              <span>einat91@gmail.com</span>
-            </a>
-            <div className="flex items-center gap-2">
-              <Phone className="w-4 h-4" />
-              <span>+972 (0) 54-2400129</span>
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-8 fade-in-up">
+          <div className="flex flex-col lg:flex-row items-center gap-6">
+            <div className="w-24 h-24 rounded-full overflow-hidden shadow-lg border-2 border-white/50">
+              <Image
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Einat-TovBCXMhVOTuH6MIZmMdbS0axDs7B9.jpeg"
+                alt="Einat Ehrlich"
+                width={96}
+                height={96}
+                className="w-full h-full object-cover"
+              />
             </div>
-            <div className="flex items-center gap-2">
-              <MapPin className="w-4 h-4" />
-              <span>Tel Aviv, Israel</span>
+            <div className="text-center lg:text-left">
+              <h1 className="text-3xl md:text-4xl font-bold text-slate-800 mb-2 baskervville">Einat Ehrlich</h1>
+              <p className="text-lg text-slate-600 font-medium flex items-center gap-2 justify-center lg:justify-start mb-3">
+                Data Analytics <Star className="w-3 h-3 fill-current" /> Operations{" "}
+                <Star className="w-3 h-3 fill-current" /> Project Management
+              </p>
+              <div className="grid grid-cols-2 gap-x-6 gap-y-2 text-sm text-slate-600">
+                <a
+                  href="https://linkedin.com/in/einat-ehrlich"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 hover:text-stone-600 transition-colors"
+                >
+                  <Linkedin className="w-4 h-4" />
+                  <span>@einat-ehrlich</span>
+                </a>
+                <div className="flex items-center gap-2">
+                  <Phone className="w-4 h-4" />
+                  <span>+972 (0) 54-2400129</span>
+                </div>
+                <a
+                  href="mailto:einat91@gmail.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 hover:text-stone-600 transition-colors"
+                >
+                  <Mail className="w-4 h-4" />
+                  <span>einat91@gmail.com</span>
+                </a>
+                <div className="flex items-center gap-2">
+                  <MapPin className="w-4 h-4" />
+                  <span>Tel Aviv, Israel</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -189,25 +205,18 @@ export default function Portfolio() {
       {/* Hello Section */}
       <section className="container mx-auto px-4 py-12">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-slate-800 mb-8 text-center fade-in-up">Hello :)</h2>
+          <h2 className="text-3xl font-bold text-slate-800 mb-8 text-center fade-in-up baskervville">Hello :)</h2>
           <Card className="bg-white/90 backdrop-blur-sm border-0 shadow-lg hover:shadow-xl transition-all duration-300 fade-in-up stagger-1">
             <CardContent className="p-8">
               <p className="text-slate-700 leading-relaxed text-base mb-6">
-                I'm a passionate data analyst who thrives on transforming complex data into actionable insights that
-                drive real business impact. With a unique blend of analytical expertise and operational leadership, I've
-                spent years building systems, optimizing workflows, and creating data-driven solutions that help
-                organizations make smarter decisions.
-              </p>
-              <p className="text-slate-700 leading-relaxed text-base mb-8">
-                From developing fraud detection algorithms to creating executive dashboards that influence strategic
-                decisions, I love the challenge of finding patterns in data and translating them into stories that
-                matter. Let's connect and explore how data can transform your business!
+                I'm Einat 👋🏽 and I'm passionate about combining data and operations. With 6+ years of hands-on
+                experience in dynamic early-stage startups, I know how to get things done and use data-driven decisions
+                to achieve tangible results. I enjoy finding valuable patterns in data and translating them into
+                actionable insights that fuel a team's success and growth. As a continuous self-learner, I'm always
+                looking to explore new tools and methods. Let's connect!
               </p>
               <div className="flex justify-center">
-                <Button className="bg-stone-700 hover:bg-stone-800 text-white px-6 py-2">
-                  <Download className="w-4 h-4 mr-2" />
-                  View CV
-                </Button>
+                <CVModal />
               </div>
             </CardContent>
           </Card>
@@ -217,7 +226,7 @@ export default function Portfolio() {
       {/* Projects Section */}
       <section className="container mx-auto px-4 py-12">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-slate-800 mb-12 text-center fade-in-up">My Projects</h2>
+          <h2 className="text-3xl font-bold text-slate-800 mb-12 text-center fade-in-up baskervville">My Projects</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {projects.map((project, index) => (
               <Card
@@ -226,28 +235,22 @@ export default function Portfolio() {
               >
                 <CardHeader className="p-0">
                   <div className="relative overflow-hidden rounded-t-lg">
-                    <div className="w-full h-48 bg-gradient-to-br from-stone-50 to-stone-100 flex items-center justify-center">
-                      <div className="text-center p-4">
-                        <div className="w-16 h-16 bg-stone-600 rounded-full mx-auto mb-3 flex items-center justify-center">
-                          <project.icon className="w-8 h-8 text-white" />
-                        </div>
-                        <p className="text-slate-600 font-medium text-sm">[Screenshot Placeholder]</p>
-                      </div>
+                    <div className="w-full h-48 bg-gradient-to-br from-stone-50 to-stone-100 border border-stone-200/50">
+                      <Image
+                        src={project.image || "/placeholder.svg"}
+                        alt={project.title}
+                        width={300}
+                        height={200}
+                        className="w-full h-full object-cover"
+                      />
                     </div>
-                    <Badge
-                      className={`absolute top-3 left-3 ${
-                        project.personal ? "bg-pink-500 text-white" : "bg-white/90 text-slate-700"
-                      }`}
-                    >
-                      {project.category}
-                    </Badge>
                   </div>
                 </CardHeader>
                 <CardContent className="p-5">
-                  <CardTitle className="text-lg mb-3 text-slate-800 group-hover:text-stone-600 transition-colors">
+                  <CardTitle className="text-lg mb-3 text-slate-800 group-hover:text-stone-600 transition-colors baskervville">
                     {project.title}
                   </CardTitle>
-                  <CardDescription className="text-slate-600 mb-4 line-clamp-3 leading-relaxed text-sm">
+                  <CardDescription className="text-slate-600 mb-4 leading-relaxed text-sm project-description">
                     {project.description}
                   </CardDescription>
                   <div className="flex flex-wrap gap-1 mb-4">
@@ -273,15 +276,15 @@ export default function Portfolio() {
                         View Project
                       </a>
                     </Button>
-                    {project.githubLink && (
+                    {project.additionalLink && (
                       <Button
                         variant="outline"
                         size="sm"
-                        className="group-hover:bg-slate-800 group-hover:text-white transition-colors bg-transparent"
+                        className="group-hover:bg-stone-600 group-hover:text-white transition-colors bg-transparent"
                         asChild
                       >
-                        <a href={project.githubLink} target="_blank" rel="noopener noreferrer">
-                          <Github className="w-4 h-4" />
+                        <a href={project.additionalLink} target="_blank" rel="noopener noreferrer">
+                          <ExternalLink className="w-4 h-4" />
                         </a>
                       </Button>
                     )}
@@ -289,6 +292,69 @@ export default function Portfolio() {
                 </CardContent>
               </Card>
             ))}
+
+            {/* Berry Project - Centered */}
+            <div className="md:col-span-2 lg:col-span-3 flex justify-center">
+              <div className="w-full max-w-md">
+                <Card className="group hover:shadow-xl transition-all duration-500 bg-white/90 backdrop-blur-sm border-0 hover:-translate-y-1 fade-in-up">
+                  <CardHeader className="p-0">
+                    <div className="relative overflow-hidden rounded-t-lg">
+                      <div className="w-full h-48 bg-gradient-to-br from-pink-50 to-rose-100 border border-pink-200/50">
+                        <Image
+                          src={berryProject.image || "/placeholder.svg"}
+                          alt={berryProject.title}
+                          width={300}
+                          height={200}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                    </div>
+                  </CardHeader>
+                  <CardContent className="p-5">
+                    <CardTitle className="text-lg mb-3 text-slate-800 group-hover:text-pink-600 transition-colors baskervville">
+                      {berryProject.title}
+                    </CardTitle>
+                    <CardDescription className="text-slate-600 mb-4 leading-relaxed text-sm project-description">
+                      {berryProject.description}
+                    </CardDescription>
+                    <div className="flex flex-wrap gap-1 mb-4">
+                      {berryProject.technologies.map((tech) => (
+                        <Badge
+                          key={tech}
+                          variant="outline"
+                          className="text-xs border-pink-200 text-pink-700 hover:bg-pink-50"
+                        >
+                          {tech}
+                        </Badge>
+                      ))}
+                    </div>
+                    <div className="flex gap-2">
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        className="flex-1 group-hover:bg-pink-600 group-hover:text-white group-hover:border-pink-600 transition-all duration-300 bg-transparent"
+                        asChild
+                      >
+                        <a href={berryProject.link} target="_blank" rel="noopener noreferrer">
+                          <ExternalLink className="w-4 h-4 mr-2" />
+                          View App
+                        </a>
+                      </Button>
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        className="group-hover:bg-slate-800 group-hover:text-white transition-colors bg-transparent"
+                        asChild
+                      >
+                        <a href={berryProject.githubLink} target="_blank" rel="noopener noreferrer">
+                          <Github className="w-4 h-4" />
+                        </a>
+                      </Button>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -296,14 +362,13 @@ export default function Portfolio() {
       {/* Get in Touch Section */}
       <section className="container mx-auto px-4 py-16">
         <div className="max-w-4xl mx-auto text-center fade-in-up">
-          <h2 className="text-3xl font-bold text-slate-800 mb-6">Get in Touch</h2>
+          <h2 className="text-3xl font-bold text-slate-800 mb-6 baskervville">Get in Touch</h2>
           <p className="text-slate-600 text-lg mb-8 leading-relaxed">
-            Ready to turn your data into actionable insights? I'd love to hear about your next project and explore how
-            we can work together to drive meaningful results.
+            Want to hear more? Think I'm the right fit for your team? Let's talk :)
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button className="bg-stone-700 hover:bg-stone-800 text-white px-8 py-3" asChild>
-              <a href="mailto:einat91@gmail.com">
+              <a href="mailto:einat91@gmail.com" target="_blank" rel="noopener noreferrer">
                 <Mail className="w-5 h-5 mr-2" />
                 Send me an email
               </a>
@@ -318,6 +383,16 @@ export default function Portfolio() {
                 Connect on LinkedIn
               </a>
             </Button>
+            <div className="phone-hover">
+              <Button
+                variant="outline"
+                className="border-stone-600 text-stone-600 hover:bg-stone-600 hover:text-white px-8 py-3 bg-transparent cursor-default"
+              >
+                <Phone className="w-5 h-5 mr-2" />
+                Call me
+              </Button>
+              <div className="phone-tooltip">+972 (0) 54-2400129</div>
+            </div>
           </div>
         </div>
       </section>
@@ -325,7 +400,7 @@ export default function Portfolio() {
       {/* Footer */}
       <footer className="container mx-auto px-4 py-8 mt-12">
         <div className="text-center text-slate-600">
-          <p>&copy; 2025 Einat Ehrlich. All rights reserved.</p>
+          <p className="text-xs">&copy; 2025 Einat Ehrlich. All rights reserved.</p>
         </div>
       </footer>
     </div>
