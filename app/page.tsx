@@ -103,7 +103,7 @@ export default function Portfolio() {
       image:
         "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Monthly%20User%20Activity%20Report-yS4n7BkBq3KomuxW9r63wuu8aRSPGd.png",
       link: "https://public.tableau.com/app/profile/einat.ehrlich1896/viz/MonthlyUserActivityReport/UserActivityReport",
-      additionalLink: "/User_Activity_Project.pdf",
+      additionalLink: "portfolio/public/User_Activity_Project.pdf",
       icon: Users,
     },
     {
