@@ -103,7 +103,7 @@ export default function Portfolio() {
       image:
         "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Monthly%20User%20Activity%20Report-yS4n7BkBq3KomuxW9r63wuu8aRSPGd.png",
       link: "https://public.tableau.com/app/profile/einat.ehrlich1896/viz/MonthlyUserActivityReport/UserActivityReport",
-      additionalLink: "portfolio/public/User_Activity_Project.pdf",
+      additionalLink: "public/User_Activity_Project.pdf",
       icon: Users,
     },
     {
@@ -113,7 +113,7 @@ export default function Portfolio() {
       technologies: ["Excel", "PowerPoint", "Market Research", "Business Analysis"],
       image:
         "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Executive%20Business%20Review-waAuiPSGv05QAZJ4wJ6WgVkCsS1g3a.png",
-      link: "/Executive_Business_Review.pdf",
+      link: "public/Executive_Business_Review.pdf",
       icon: PresentationChart,
     },
     {
@@ -132,7 +132,7 @@ export default function Portfolio() {
       technologies: ["SQL", "Fraud Detection", "Pattern Analysis", "Security"],
       image:
         "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Fraud%20Detection%20Rules-d84CP3oyXrlP6IXXYM47neuqBV0T56.png",
-      link: "/Fraud_Detection_Logic.pdf",
+      link: "public/Fraud_Detection_Logic.pdf",
       icon: Shield,
     },
     {
@@ -170,7 +170,7 @@ export default function Portfolio() {
         "This project was created as part of the Data Analysis course of SheCodes, an amazing initiative designed to help women develop their careers in tech. I designed the database using Draw.io, and built a database management system using Excel and SQL. Then, I summarized the project and its insights in a final Canva presentation.",
       technologies: ["Excel", "SQL", "Database Design"],
       image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Bike%20Store-J17bOdhNhBKr5JRIfnLDvY1OAE9si4.png",
-      link: "/Bike_Store_Management.zip",
+      link: "public/Bike_Store_Management.zip",
       icon: TrendingUp,
     },
   ]
