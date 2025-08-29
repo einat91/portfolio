@@ -65,6 +65,11 @@ const SparklesIcon = ({ className }: { className?: string }) => (
   </svg>
 )
 
+// Technology color mapping
+const getTechColor = (tech: string) => {
+  return "text-black border-gray-300 bg-transparent"
+}
+
 export default function Portfolio() {
   useEffect(() => {
     const observerOptions = {
@@ -298,11 +303,7 @@ export default function Portfolio() {
                   </CardDescription>
                   <div className="flex flex-wrap gap-1 mb-4">
                     {project.technologies.map((tech) => (
-                      <Badge
-                        key={tech}
-                        variant="outline"
-                        className="text-xs border-stone-200 text-stone-700 hover:bg-stone-50"
-                      >
+                      <Badge key={tech} variant="outline" className={`text-xs font-medium ${getTechColor(tech)}`}>
                         {tech}
                       </Badge>
                     ))}
@@ -311,24 +312,27 @@ export default function Portfolio() {
                     <Button
                       variant="outline"
                       size="sm"
-                      className="flex-1 hover:bg-stone-700 hover:text-white hover:border-stone-700 transition-all duration-300 bg-transparent"
+                      className="flex-1 hover:bg-stone-700 hover:text-white hover:border-stone-700 transition-all duration-300 bg-transparent text-sm h-9"
                       asChild
                     >
                       <a href={project.link} target="_blank" rel="noopener noreferrer">
                         <ExternalLink className="w-4 h-4 mr-2" />
-                        View Project
+                        View{" "}
+                        {project.title.includes("Bitcoin") || project.title.includes("Monthly User")
+                          ? "Dashboard"
+                          : "Project"}
                       </a>
                     </Button>
                     {project.additionalLink && (
                       <Button
                         variant="outline"
                         size="sm"
-                        className="hover:bg-stone-600 hover:text-white hover:border-stone-600 transition-all duration-300 bg-transparent"
+                        className="hover:bg-stone-600 hover:text-white hover:border-stone-600 transition-all duration-300 bg-transparent text-sm h-9 px-3"
                         asChild
                       >
                         <a href={project.additionalLink} target="_blank" rel="noopener noreferrer">
                           <FileText className="w-4 h-4 mr-1" />
-                          <span className="text-xs">View Documents</span>
+                          <span>View Documents</span>
                         </a>
                       </Button>
                     )}
@@ -365,11 +369,7 @@ export default function Portfolio() {
                     </CardDescription>
                     <div className="flex flex-wrap gap-1 mb-4">
                       {berryProject.technologies.map((tech) => (
-                        <Badge
-                          key={tech}
-                          variant="outline"
-                          className="text-xs border-stone-200 text-stone-700 hover:bg-stone-50"
-                        >
+                        <Badge key={tech} variant="outline" className={`text-xs font-medium ${getTechColor(tech)}`}>
                           {tech}
                         </Badge>
                       ))}
@@ -378,7 +378,7 @@ export default function Portfolio() {
                       <Button
                         variant="outline"
                         size="sm"
-                        className="flex-1 hover:bg-stone-700 hover:text-white hover:border-stone-700 transition-all duration-300 bg-transparent"
+                        className="flex-1 hover:bg-stone-700 hover:text-white hover:border-stone-700 transition-all duration-300 bg-transparent text-sm h-9"
                         asChild
                       >
                         <a href={berryProject.link} target="_blank" rel="noopener noreferrer">
@@ -389,7 +389,7 @@ export default function Portfolio() {
                       <Button
                         variant="outline"
                         size="sm"
-                        className="hover:bg-slate-800 hover:text-white hover:border-slate-800 transition-all duration-300 bg-transparent"
+                        className="hover:bg-slate-800 hover:text-white hover:border-slate-800 transition-all duration-300 bg-transparent text-sm h-9 px-3"
                         asChild
                       >
                         <a href={berryProject.githubLink} target="_blank" rel="noopener noreferrer">
@@ -408,7 +408,7 @@ export default function Portfolio() {
       {/* Get in Touch Section */}
       <section className="container mx-auto px-4 py-16">
         <div className="max-w-4xl mx-auto text-center fade-in-up">
-          <h2 className="text-3xl font-bold text-slate-800 mb-6 baskerville">Get in Touch</h2>
+          <h2 className="text-3xl font-bold text-slate-800 mb-6 baskervville">Get in Touch</h2>
           <p className="text-slate-600 text-lg mb-8 leading-relaxed">
             Want to hear more? Think I'm the right fit for your team? Let's talk :)
           </p>
