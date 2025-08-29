@@ -127,7 +127,7 @@ export default function Portfolio() {
       title: "Cloud Costs Optimization",
       description:
         "Built a cost optimization report to optimize LLM token usage for both customer and internal operations. I used extensive SQL queries to clean log data and provide key visibility for tenant identification across log databases and Datadog reports. This data fed into a detailed Tableau dashboard that tracked token consumption patterns, enabling smarter resource management and significant cost savings.",
-      technologies: ["SQL", "Tableau", "Datadog", "Cloud Analytics", "Cost Optimization"],
+      technologies: ["SQL", "Tableau", "Datadog", "Cloud Analysis"],
       image: "/placeholder.svg?height=200&width=300&text=Cloud+Costs",
       link: "#",
       icon: Cloud,
@@ -136,7 +136,7 @@ export default function Portfolio() {
       title: "Fraud Detection Logic",
       description:
         "Created SQL-based fraud detection logic for a FinTech company. By analyzing patterns in user behavior, device fingerprinting, and transaction anomalies, this logic enabled the identification of suspicious activities.",
-      technologies: ["SQL", "Fraud Detection", "Pattern Analysis", "Security"],
+      technologies: ["SQL", "Security"],
       image:
         "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Fraud%20Detection%20Rules-d84CP3oyXrlP6IXXYM47neuqBV0T56.png",
       link: "/Fraud_Detection_Logic.pdf",
@@ -165,7 +165,7 @@ export default function Portfolio() {
       title: "World Football Results Analysis",
       description:
         "Inspired by my passion for English football and the excitement of the World Cup, I created an interactive dashboard analyzing international football results. This project combines my love for the game with data storytelling.",
-      technologies: ["Excel", "Power BI", "Data Visualization"],
+      technologies: ["Excel", "Power BI"],
       image:
         "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/World%20Football-uLzynmPVb3jOAG7Q4vhALvy0Tl9vjA.png",
       link: "https://app.powerbi.com/view?r=eyJrIjoiMjVlZjI5OTEtNGJiYy00MDBhLWI5ZmEtN2QyNTllNzNhYjYzIiwidCI6IjAwZWIyMzU1LTRkYTItNDc0OS05ZTQ4LWE5OTAwYTFlYTMwMSIsImMiOjl9",
@@ -175,7 +175,7 @@ export default function Portfolio() {
       title: "Bike Store Database Management",
       description:
         "This project was created as part of the Data Analysis course of SheCodes, an amazing initiative designed to help women develop their careers in tech. I designed the database using Draw.io, and built a database management system using Excel and SQL. Then, I summarized the project and its insights in a final Canva presentation.",
-      technologies: ["Excel", "SQL", "Database Design"],
+      technologies: ["Excel", "SQL", "Canva"],
       image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Bike%20Store-J17bOdhNhBKr5JRIfnLDvY1OAE9si4.png",
       link: "/Bike_Store_Management.zip",
       icon: TrendingUp,
