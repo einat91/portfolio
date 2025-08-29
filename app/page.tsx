@@ -17,6 +17,7 @@ import {
   TrendingUp,
   Trophy,
   Heart,
+  FileText,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
@@ -93,6 +94,7 @@ export default function Portfolio() {
       technologies: ["SQL", "Tableau", "Financial Analysis"],
       image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Bitcoin-a5Mwr36IsxRD8hBr8DAqECN6ZEHJAo.png",
       link: "https://public.tableau.com/app/profile/einat.ehrlich1896/viz/BitcoinHistoryChangeBetween2015-2025/Dashboard1",
+      additionalLink: "/Bitcoin_History_Data.zip",
       icon: Bitcoin,
     },
     {
@@ -102,7 +104,7 @@ export default function Portfolio() {
       technologies: ["SQL", "Google Sheets", "Tableau"],
       image:
         "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Monthly%20User%20Activity%20Report-yS4n7BkBq3KomuxW9r63wuu8aRSPGd.png",
-      link: "/User_Activity_Project.pdf",
+      link: "https://public.tableau.com/app/profile/einat.ehrlich1896/viz/MonthlyUserActivityReport/UserActivityReport",
       additionalLink: "/User_Activity_Project.pdf",
       icon: Users,
     },
@@ -274,15 +276,17 @@ export default function Portfolio() {
               >
                 <CardHeader className="p-0">
                   <div className="relative overflow-hidden rounded-t-lg">
-                    <div className="w-full h-48 bg-gradient-to-br from-stone-50 to-stone-100 border border-stone-200/50">
-                      <Image
-                        src={project.image || "/placeholder.svg"}
-                        alt={project.title}
-                        width={300}
-                        height={200}
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
+                    <a href={project.link} target="_blank" rel="noopener noreferrer" className="block">
+                      <div className="w-full h-48 bg-gradient-to-br from-stone-50 to-stone-100 border border-stone-200/50 cursor-pointer">
+                        <Image
+                          src={project.image || "/placeholder.svg"}
+                          alt={project.title}
+                          width={300}
+                          height={200}
+                          className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                        />
+                      </div>
+                    </a>
                   </div>
                 </CardHeader>
                 <CardContent className="p-5">
@@ -307,7 +311,7 @@ export default function Portfolio() {
                     <Button
                       variant="outline"
                       size="sm"
-                      className="flex-1 group-hover:bg-stone-700 group-hover:text-white group-hover:border-stone-700 transition-all duration-300 bg-transparent"
+                      className="flex-1 hover:bg-stone-700 hover:text-white hover:border-stone-700 transition-all duration-300 bg-transparent"
                       asChild
                     >
                       <a href={project.link} target="_blank" rel="noopener noreferrer">
@@ -319,11 +323,12 @@ export default function Portfolio() {
                       <Button
                         variant="outline"
                         size="sm"
-                        className="group-hover:bg-stone-600 group-hover:text-white transition-colors bg-transparent"
+                        className="hover:bg-stone-600 hover:text-white hover:border-stone-600 transition-all duration-300 bg-transparent"
                         asChild
                       >
                         <a href={project.additionalLink} target="_blank" rel="noopener noreferrer">
-                          <ExternalLink className="w-4 h-4" />
+                          <FileText className="w-4 h-4 mr-1" />
+                          <span className="text-xs">View Documents</span>
                         </a>
                       </Button>
                     )}
@@ -338,19 +343,21 @@ export default function Portfolio() {
                 <Card className="group hover:shadow-xl transition-all duration-500 bg-white/90 backdrop-blur-sm border-0 hover:-translate-y-1 fade-in-up">
                   <CardHeader className="p-0">
                     <div className="relative overflow-hidden rounded-t-lg">
-                      <div className="w-full h-48 bg-gradient-to-br from-pink-50 to-rose-100 border border-pink-200/50">
-                        <Image
-                          src={berryProject.image || "/placeholder.svg"}
-                          alt={berryProject.title}
-                          width={300}
-                          height={200}
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
+                      <a href={berryProject.link} target="_blank" rel="noopener noreferrer" className="block">
+                        <div className="w-full h-48 bg-gradient-to-br from-stone-50 to-stone-100 border border-stone-200/50 cursor-pointer">
+                          <Image
+                            src={berryProject.image || "/placeholder.svg"}
+                            alt={berryProject.title}
+                            width={300}
+                            height={200}
+                            className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                          />
+                        </div>
+                      </a>
                     </div>
                   </CardHeader>
                   <CardContent className="p-5">
-                    <CardTitle className="text-lg mb-3 text-slate-800 group-hover:text-pink-600 transition-colors baskerville">
+                    <CardTitle className="text-lg mb-3 text-slate-800 group-hover:text-stone-600 transition-colors baskerville">
                       {berryProject.title}
                     </CardTitle>
                     <CardDescription className="text-slate-600 mb-4 leading-relaxed text-sm project-description">
@@ -361,7 +368,7 @@ export default function Portfolio() {
                         <Badge
                           key={tech}
                           variant="outline"
-                          className="text-xs border-pink-200 text-pink-700 hover:bg-pink-50"
+                          className="text-xs border-stone-200 text-stone-700 hover:bg-stone-50"
                         >
                           {tech}
                         </Badge>
@@ -371,7 +378,7 @@ export default function Portfolio() {
                       <Button
                         variant="outline"
                         size="sm"
-                        className="flex-1 group-hover:bg-pink-600 group-hover:text-white group-hover:border-pink-600 transition-all duration-300 bg-transparent"
+                        className="flex-1 hover:bg-stone-700 hover:text-white hover:border-stone-700 transition-all duration-300 bg-transparent"
                         asChild
                       >
                         <a href={berryProject.link} target="_blank" rel="noopener noreferrer">
@@ -382,7 +389,7 @@ export default function Portfolio() {
                       <Button
                         variant="outline"
                         size="sm"
-                        className="group-hover:bg-slate-800 group-hover:text-white transition-colors bg-transparent"
+                        className="hover:bg-slate-800 hover:text-white hover:border-slate-800 transition-all duration-300 bg-transparent"
                         asChild
                       >
                         <a href={berryProject.githubLink} target="_blank" rel="noopener noreferrer">
