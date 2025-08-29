@@ -114,7 +114,7 @@ export default function Portfolio() {
       icon: Users,
     },
     {
-      title: "Executive Business Review for an E-commerce Company",
+      title: "Executive Business Review",
       description:
         "Conducted a comprehensive Year-End Performance Analysis for an e-commerce company, providing strategic recommendations based on thorough market research and data analysis.",
       technologies: ["Excel", "PowerPoint", "Business Analysis", "Market Research"],
