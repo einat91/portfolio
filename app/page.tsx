@@ -3,7 +3,6 @@
 import { useEffect } from "react"
 import Image from "next/image"
 import {
-  Linkedin,
   Mail,
   MapPin,
   Phone,
@@ -18,12 +17,52 @@ import {
   TrendingUp,
   Trophy,
   Heart,
-  Star,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { CVModal } from "@/components/cv-modal"
+
+// Custom LinkedIn Icon Component
+const LinkedinIcon = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="16"
+    height="16"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="0.5"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className="lucide lucide-linkedin-icon lucide-linkedin"
+  >
+    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+    <rect width="4" height="12" x="2" y="9" />
+    <circle cx="4" cy="4" r="2" />
+  </svg>
+)
+
+// Custom Sparkles Icon Component
+const SparklesIcon = ({ className }: { className?: string }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="12"
+    height="12"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="0.5"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className={`lucide lucide-sparkles-icon lucide-sparkles ${className}`}
+  >
+    <path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z" />
+    <path d="M20 2v4" />
+    <path d="M22 4h-4" />
+    <circle cx="4" cy="20" r="2" />
+  </svg>
+)
 
 export default function Portfolio() {
   useEffect(() => {
@@ -166,8 +205,8 @@ export default function Portfolio() {
             <div className="text-center lg:text-left">
               <h1 className="text-3xl md:text-4xl font-bold text-slate-800 mb-2 baskervville">Einat Ehrlich</h1>
               <p className="text-lg text-slate-600 font-medium flex items-center gap-2 justify-center lg:justify-start mb-3">
-                Data Analytics <Star className="w-3 h-3 fill-current" /> Operations{" "}
-                <Star className="w-3 h-3 fill-current" /> Project Management
+                Data Analytics <SparklesIcon className="fill-current" /> Operations{" "}
+                <SparklesIcon className="fill-current" /> Project Management
               </p>
               <div className="grid grid-cols-2 gap-x-6 gap-y-2 text-sm text-slate-600">
                 <a
@@ -176,7 +215,7 @@ export default function Portfolio() {
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 hover:text-stone-600 transition-colors"
                 >
-                  <Linkedin className="w-4 h-4" />
+                  <LinkedinIcon />
                   <span>@einat-ehrlich</span>
                 </a>
                 <div className="flex items-center gap-2">
@@ -379,8 +418,8 @@ export default function Portfolio() {
               asChild
             >
               <a href="https://linkedin.com/in/einat-ehrlich" target="_blank" rel="noopener noreferrer">
-                <Linkedin className="w-5 h-5 mr-2" />
-                Connect on LinkedIn
+                <LinkedinIcon />
+                <span className="ml-2">Connect on LinkedIn</span>
               </a>
             </Button>
             <div className="phone-hover">
