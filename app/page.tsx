@@ -360,14 +360,14 @@ export default function Portfolio() {
                       </a>
                     </div>
                   </CardHeader>
-                  <CardContent className="p-5">
+                  <CardContent className="p-5 flex flex-col h-full">
                     <CardTitle className="text-lg mb-3 text-slate-800 group-hover:text-stone-600 transition-colors baskerville">
                       {berryProject.title}
                     </CardTitle>
-                    <CardDescription className="text-slate-600 mb-4 leading-relaxed text-sm project-description">
+                   <CardDescription className="text-slate-600 leading-relaxed text-sm flex-grow">
                       {berryProject.description}
                     </CardDescription>
-                    <div className="flex flex-wrap gap-1 mb-4">
+                   <div className="flex flex-wrap gap-1 mt-4">
                       {berryProject.technologies.map((tech) => (
                         <Badge key={tech} variant="outline" className={`text-xs font-medium ${getTechColor(tech)}`}>
                           {tech}
