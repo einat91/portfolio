@@ -32,7 +32,7 @@ const LinkedinIcon = () => (
     viewBox="0 0 24 24"
     fill="none"
     stroke="currentColor"
-    strokeWidth="0.5"
+    strokeWidth="2"
     strokeLinecap="round"
     strokeLinejoin="round"
     className="lucide lucide-linkedin-icon lucide-linkedin"
@@ -103,7 +103,7 @@ export default function Portfolio() {
       image:
         "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Monthly%20User%20Activity%20Report-yS4n7BkBq3KomuxW9r63wuu8aRSPGd.png",
       link: "https://public.tableau.com/app/profile/einat.ehrlich1896/viz/MonthlyUserActivityReport/UserActivityReport",
-      additionalLink: "https://drive.google.com/file/d/12yBHOxlP1wE_kMuHyGu_pYTSequjKoRv/view?usp=sharing",
+      additionalLink: "/User_Activity_Project.pdf",
       icon: Users,
     },
     {
@@ -113,7 +113,7 @@ export default function Portfolio() {
       technologies: ["Excel", "PowerPoint", "Market Research", "Business Analysis"],
       image:
         "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Executive%20Business%20Review-waAuiPSGv05QAZJ4wJ6WgVkCsS1g3a.png",
-      link: "https://drive.google.com/file/d/1SN0PLAP_Fcom-ix-__SZfcLWSUlFsBFP/view?usp=sharing",
+      link: "/Executive_Business_Review.pdf",
       icon: PresentationChart,
     },
     {
@@ -132,7 +132,7 @@ export default function Portfolio() {
       technologies: ["SQL", "Fraud Detection", "Pattern Analysis", "Security"],
       image:
         "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Fraud%20Detection%20Rules-d84CP3oyXrlP6IXXYM47neuqBV0T56.png",
-      link: "https://drive.google.com/file/d/1gNzZfeWNQY8Weho6wZWFwgG6SOLaNXYp/view?usp=sharing",
+      link: "/Fraud_Detection_Logic.pdf",
       icon: Shield,
     },
     {
@@ -170,7 +170,7 @@ export default function Portfolio() {
         "This project was created as part of the Data Analysis course of SheCodes, an amazing initiative designed to help women develop their careers in tech. I designed the database using Draw.io, and built a database management system using Excel and SQL. Then, I summarized the project and its insights in a final Canva presentation.",
       technologies: ["Excel", "SQL", "Database Design"],
       image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Bike%20Store-J17bOdhNhBKr5JRIfnLDvY1OAE9si4.png",
-      link: "https://drive.google.com/file/d/1PX71rsJ6GbPNtlqRWEnfSmTV73-o29hh/view?usp=sharing",
+      link: "/Bike_Store_Management.zip",
       icon: TrendingUp,
     },
   ]
@@ -265,7 +265,7 @@ export default function Portfolio() {
       {/* Projects Section */}
       <section className="container mx-auto px-4 py-12">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-slate-800 mb-12 text-center fade-in-up baskervville">My Projects</h2>
+          <h2 className="text-3xl font-bold text-slate-800 mb-12 text-center fade-in-up baskerville">My Projects</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {projects.map((project, index) => (
               <Card
@@ -286,7 +286,7 @@ export default function Portfolio() {
                   </div>
                 </CardHeader>
                 <CardContent className="p-5">
-                  <CardTitle className="text-lg mb-3 text-slate-800 group-hover:text-stone-600 transition-colors baskervville">
+                  <CardTitle className="text-lg mb-3 text-slate-800 group-hover:text-stone-600 transition-colors baskerville">
                     {project.title}
                   </CardTitle>
                   <CardDescription className="text-slate-600 mb-4 leading-relaxed text-sm project-description">
@@ -350,7 +350,7 @@ export default function Portfolio() {
                     </div>
                   </CardHeader>
                   <CardContent className="p-5">
-                    <CardTitle className="text-lg mb-3 text-slate-800 group-hover:text-pink-600 transition-colors baskervville">
+                    <CardTitle className="text-lg mb-3 text-slate-800 group-hover:text-pink-600 transition-colors baskerville">
                       {berryProject.title}
                     </CardTitle>
                     <CardDescription className="text-slate-600 mb-4 leading-relaxed text-sm project-description">
@@ -401,7 +401,7 @@ export default function Portfolio() {
       {/* Get in Touch Section */}
       <section className="container mx-auto px-4 py-16">
         <div className="max-w-4xl mx-auto text-center fade-in-up">
-          <h2 className="text-3xl font-bold text-slate-800 mb-6 baskervville">Get in Touch</h2>
+          <h2 className="text-3xl font-bold text-slate-800 mb-6 baskerville">Get in Touch</h2>
           <p className="text-slate-600 text-lg mb-8 leading-relaxed">
             Want to hear more? Think I'm the right fit for your team? Let's talk :)
           </p>
