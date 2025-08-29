@@ -106,7 +106,7 @@ export default function Portfolio() {
       title: "Monthly User Activity Report",
       description:
         "Built and designed a user activity tracking report, from the database design, through Google Sheets integration to final Tableau visualization. I created custom SQL queries to analyze user engagement patterns and activity trends.",
-      technologies: ["SQL", "Google Sheets", "Tableau"],
+      technologies: ["SQL", "Tableau", "Google Sheets"],
       image:
         "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Monthly%20User%20Activity%20Report-yS4n7BkBq3KomuxW9r63wuu8aRSPGd.png",
       link: "https://public.tableau.com/app/profile/einat.ehrlich1896/viz/MonthlyUserActivityReport/UserActivityReport",
@@ -117,7 +117,7 @@ export default function Portfolio() {
       title: "Executive Business Review for an E-commerce Company",
       description:
         "Conducted a comprehensive Year-End Performance Analysis for an e-commerce company, providing strategic recommendations based on thorough market research and data analysis.",
-      technologies: ["Excel", "PowerPoint", "Market Research", "Business Analysis"],
+      technologies: ["Excel", "PowerPoint", "Business Analysis", "Market Research"],
       image:
         "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Executive%20Business%20Review-waAuiPSGv05QAZJ4wJ6WgVkCsS1g3a.png",
       link: "/Executive_Business_Review.pdf",
