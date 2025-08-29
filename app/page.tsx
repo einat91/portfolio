@@ -308,15 +308,15 @@ export default function Portfolio() {
                       </Badge>
                     ))}
                   </div>
-                  <div className="flex gap-1">
+                  <div className={`flex gap-2 ${project.additionalLink ? "mt-1" : ""}`}>
                     <Button
                       variant="outline"
                       size="sm"
-                      className="flex-1 hover:bg-stone-700 hover:text-white hover:border-stone-700 transition-all duration-300 bg-transparent text-xs h-8 px-2"
+                      className="flex-1 hover:bg-stone-700 hover:text-white hover:border-stone-700 transition-all duration-300 bg-transparent text-sm h-9"
                       asChild
                     >
                       <a href={project.link} target="_blank" rel="noopener noreferrer">
-                        <ExternalLink className="w-3 h-3 mr-1" />
+                        <ExternalLink className="w-4 h-4 mr-2" />
                         View{" "}
                         {project.title.includes("Bitcoin") || project.title.includes("Monthly User")
                           ? "Dashboard"
@@ -327,12 +327,12 @@ export default function Portfolio() {
                       <Button
                         variant="outline"
                         size="sm"
-                        className="hover:bg-stone-600 hover:text-white hover:border-stone-600 transition-all duration-300 bg-transparent text-xs h-8 px-2"
+                        className="flex-1 hover:bg-stone-600 hover:text-white hover:border-stone-600 transition-all duration-300 bg-transparent text-sm h-9"
                         asChild
                       >
                         <a href={project.additionalLink} target="_blank" rel="noopener noreferrer">
-                          <FileText className="w-3 h-3 mr-1" />
-                          <span>Docs</span>
+                          <FileText className="w-4 h-4 mr-2" />
+                          <span>View Docs</span>
                         </a>
                       </Button>
                     )}
