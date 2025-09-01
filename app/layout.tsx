@@ -16,7 +16,7 @@ const baskervville = Baskervville({
 })
 
 export const metadata: Metadata = {
-  title: "Einat Ehrlich - Data Analyst Portfolio",
+  title: "Einat Ehrlich Portfolio",
   description: "Data Analyst specializing in operations, project management, and business intelligence",
   generator: "v0.app",
   icons: {
