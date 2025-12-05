@@ -255,11 +255,12 @@ export default function Portfolio() {
           <Card className="bg-white/90 backdrop-blur-sm border-0 shadow-lg hover:shadow-xl transition-all duration-300 fade-in-up stagger-1">
             <CardContent className="p-8">
               <p className="text-slate-700 leading-relaxed text-base mb-6">
-                I'm Einat 👋🏽 and I'm passionate about combining data and operations. With 6+ years of hands-on
-                experience in dynamic early-stage startups, I know how to get things done and use data-driven decisions
-                to achieve tangible results. I enjoy finding valuable patterns in data and translating them into
-                actionable insights that fuel a team's success and growth. As a continuous self-learner, I'm always
-                looking to explore new tools and methods. Let's connect!
+                I'm Einat 👋🏽 and I'm passionate about the intersection of data and operations. 
+                With 6+ years experience in dynamic early-stage startups, I leverage data-driven decisions to streamline processes and achieve tangible results.
+                I apply my analytical skills to build insightful reports and optimize workflows that drive operational excellence.
+                to build insightful reports, optimize workflows, and drive operational excellence.
+                I enjoy bridging the gap between raw data and complex project execution to create real impact. 
+                As a continuous self-learner, I'm always ready to explore new tools. Let's connect!                
               </p>
               <div className="flex justify-center">
                 <CVModal />
